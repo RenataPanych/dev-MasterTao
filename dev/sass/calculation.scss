@@ -1,0 +1,102 @@
+.calculation {
+    .container {
+        position: relative;
+    }
+}
+
+.calculation-row {
+    display: flex;
+    align-items: flex-start;
+}
+
+.calculation-form {
+    width: 626px;
+    min-width: 626px;
+    background: $bg-secondary;
+    border-radius: 20px;
+    padding: 50px 48px 61px;
+    box-shadow: 15px 5px 40px #09134947;
+    .col {
+        padding: 0 15px;
+
+    }
+
+    .btn-lg {
+        padding: 19.6px 30px;
+    }
+}
+
+.col.controled-col {
+    padding-top: 20px;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    position: relative;
+
+    &.controled-wrapper {
+        margin-bottom: 8px;
+    }
+
+    &.file-wrapper {
+        padding-top: 46px;
+    }
+}
+
+label {
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 126%;
+    margin-bottom: 6px;
+}
+
+
+input {
+    border-radius: 10px;
+    padding: 16px 20px;
+    width: 100%;
+    border: none;
+    transition: all .4s;
+    @include fieldState;
+
+    &::placeholder {
+        font-size: 15px;
+        line-height: 126%;
+        color: #cbcbcb;
+    }
+
+    &[type=file] {
+        display: none;
+    }
+}
+
+
+[type=file]+label {
+    @extend input;
+    border: 1px dashed #596b1038;
+    padding: 11px 14px;
+    text-align: center;
+}
+
+.file-name {
+    position: absolute;
+    top: 12px;
+    left: 0;
+    font-size: 15px;
+}
+
+
+.calculation-decoration {
+    margin: auto 0 -100px -29px;
+    height: auto;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    max-width: 560px;
+    width: 30vw;
+    img {
+        max-width: calc(100% + 46px);
+    }
+}
