@@ -1,0 +1,283 @@
+/* Theme Name: CustomTheme 
+Theme URI: https://wordpress.org/themes/CustomTheme/
+Author: the Rost team
+Author URI: http://rost.com.ua/
+Description: CustomTheme brings your site to life with immersive featured images and subtle animations. Our default theme works great in many languages, for any abilities, and on any device.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: CustomTheme
+Tags: custom-colors, custom-header, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, post-formats
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./assets/fonts/ProximaNovaLight.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./assets/fonts/ProximaNovaRegular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./assets/fonts/ProximaNovaSemibold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ProximaNova";
+  src: url("./assets/fonts/ProximaNovaBold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+.header {
+  position: relative;
+  padding: 25px 0 39px;
+}
+.header-logo {
+  max-width: 168px;
+}
+.header > .container {
+  display: flex;
+}
+.header-nav {
+  display: flex;
+  width: 100%;
+  box-shadow: 14px 22px 40px 0 #1e23429c;
+}
+.header-nav-list {
+  display: flex;
+  gap: 8px;
+  list-style: none;
+  font-weight: 400;
+  line-height: 150%;
+  padding-left: 88px;
+}
+.header-list-link {
+  padding: 10px 10px 10px;
+  padding: 13px 12px 10px;
+  text-decoration: none;
+  color: #fff;
+}
+.header-list-link:hover {
+  color: #E58D35;
+}
+.header .btn {
+  margin-left: auto;
+}
+.header-list-item {
+  display: flex;
+}
+.header .btn {
+  width: 171px;
+}
+.header .hamburger {
+  margin-left: auto;
+}
+
+h1 {
+  font-size: 39px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 32px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 22px;
+}
+
+h6 {
+  font-size: 20px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 700;
+  line-height: 126%;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-600 {
+  font-weight: 600;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+body {
+  font-size: 16px;
+  color: #fff;
+  background-color: #282B38;
+  font-family: "ProximaNova";
+}
+
+.container {
+  max-width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.btn {
+  width: 171px;
+  height: 50px;
+  border-radius: 90px;
+  background-color: #E58D35;
+  color: #FFFFFF;
+  padding: 13px 17px;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 600;
+  line-height: 146%;
+  display: inline-block;
+}
+
+ol {
+  counter-reset: li;
+}
+ol li {
+  list-style: none;
+}
+ol li:not([class]):before {
+  content: counter(li, decimal) ".";
+  counter-increment: li;
+  color: #89C249;
+  margin-right: 12px;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+ul li {
+  list-style: none;
+}
+ul li:not([class]):before {
+  content: "";
+  background-color: #89C249;
+  margin-right: 12px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+h1 {
+  color: blue;
+}
+
+footer {
+  height: 100px;
+  background: #89C249;
+  margin-top: auto;
+}
+
+@media (min-width: 1025px) {
+  .hamburger {
+    display: none;
+  }
+}
+@media screen and (max-width: 1199px) {
+  .header-nav-list {
+    gap: 20px;
+  }
+  .header-list-link {
+    padding: 13px 12px 10px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+  .header {
+    padding: 18px 0 15px;
+  }
+  .header::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 72px;
+    background-color: #282B38;
+    z-index: 2;
+  }
+  .header-logo-link {
+    z-index: 2;
+  }
+  .header-logo-img {
+    max-width: 126px;
+  }
+  .header-nav {
+    flex-direction: column;
+    background-color: #363A4D;
+    position: absolute;
+    top: -510px;
+    left: 0;
+    padding: 41px 0 60px 0;
+    transition: 0.8s;
+    z-index: 1;
+  }
+  .header-nav.show {
+    top: 72px;
+  }
+  .header-nav-list {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 38px;
+    padding: 0;
+  }
+  .header-nav button.btn {
+    width: 100%;
+    padding: 22px 23px;
+    max-width: 295px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .header-list-link {
+    font-size: 24px;
+    line-height: 184%;
+    padding: 0;
+  }
+  .hamburger {
+    z-index: 2;
+  }
+}
+/* #sourceMappingURL=style.css.map /*
+

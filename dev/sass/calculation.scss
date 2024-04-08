@@ -1,10 +1,10 @@
-.calculation {
-    .container {
+.calculation{
+    .container{
         position: relative;
     }
 }
 
-.calculation-row {
+.calculation-row{
     display: flex;
     align-items: flex-start;
 }
@@ -12,17 +12,13 @@
 .calculation-form {
     width: 626px;
     min-width: 626px;
-    background: $bg-secondary;
+    background-color: $bg-secondary;
     border-radius: 20px;
     padding: 50px 48px 61px;
     box-shadow: 15px 5px 40px #09134947;
-    .col {
+
+    .col{
         padding: 0 15px;
-
-    }
-
-    .btn-lg {
-        padding: 19.6px 30px;
     }
 }
 
@@ -31,34 +27,32 @@
 }
 
 .input-wrapper {
+    position: relative;
     display: flex;
     flex-direction: column;
     margin-bottom: 20px;
-    position: relative;
 
-    &.controled-wrapper {
+    &.controled-wrapped {
         margin-bottom: 8px;
     }
-
     &.file-wrapper {
         padding-top: 46px;
     }
 }
 
 label {
-    font-weight: 600;
     font-size: 15px;
+    font-weight: 600;
     line-height: 126%;
     margin-bottom: 6px;
 }
 
-
 input {
     border-radius: 10px;
     padding: 16px 20px;
-    width: 100%;
     border: none;
-    transition: all .4s;
+    max-width: 100%;
+    transition: all .5s;
     @include fieldState;
 
     &::placeholder {
@@ -67,29 +61,27 @@ input {
         color: #cbcbcb;
     }
 
-    &[type=file] {
+    &[type="file"]{
         display: none;
     }
 }
 
-
-[type=file]+label {
-    @extend input;
-    border: 1px dashed #596b1038;
+[type=file]+label{
+    border: 1px dashed #ffffff38;
+    border-radius: 10px;
     padding: 11px 14px;
     text-align: center;
-}
 
-.file-name {
+    @extend input;
+}
+.file-name{
     position: absolute;
-    top: 12px;
     left: 0;
+    top: 12px;
     font-size: 15px;
 }
-
-
 .calculation-decoration {
-    margin: auto 0 -100px -29px;
+    margin: 0 0 -15px -29px;
     height: auto;
     position: absolute;
     right: 0;
@@ -100,3 +92,4 @@ input {
         max-width: calc(100% + 46px);
     }
 }
+
