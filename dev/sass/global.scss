@@ -227,7 +227,7 @@ body{
                 height: 2px;
                 background-color: $color-secondary;
                 display: inline-block;
-                margin: 10px 20px;
+                margin: 10px 2px;
             }
         }
 
@@ -377,3 +377,7 @@ ul {
         background-color: transparent;
         border-color: #E58D35;
     }
+
+    .advantages {
+    @include default-bg;
+}
