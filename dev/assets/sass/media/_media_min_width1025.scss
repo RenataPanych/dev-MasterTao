@@ -1,0 +1,8 @@
+@media (min-width: 1025px) {
+    .hamburger{
+        display: none;
+    }
+    button:focus:not(:focus-visible) {
+        box-shadow: none;
+    }
+}

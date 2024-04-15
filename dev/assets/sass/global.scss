@@ -62,6 +62,8 @@ body{
     background-color: $bg-primary;
     font-family: $font-primary;
 }
+
+
 .container {
     max-width: 1170px;
     margin-right: auto;
@@ -181,7 +183,6 @@ body{
             }
         }
     }
-    
 }
 .template-title {
     text-align: center;
@@ -200,6 +201,7 @@ body{
         font-size: 24px;
         line-height: 1.25;
     }
+    
 
     &:after {
         content: "";
@@ -369,4 +371,9 @@ ul {
                 }
             }
         }
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        border-color: #E58D35;
     }

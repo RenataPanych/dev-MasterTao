@@ -7,15 +7,18 @@
 .calculation-row{
     display: flex;
     align-items: flex-start;
+    padding: 0 0 120px;
 }
 
+
 .calculation-form {
-    width: 626px;
-    min-width: 626px;
-    background-color: $bg-secondary;
-    border-radius: 20px;
-    padding: 50px 48px 61px;
-    box-shadow: 15px 5px 40px #09134947;
+        width: 626px;
+        min-width: 626px;
+        background-color: #363A4D;
+        border-radius: 20px;
+        padding: 50px 48px 61px;
+        box-shadow: 15px 5px 40px rgba(9, 19, 73, 0.2784313725);
+    
 
     .col{
         padding: 0 15px;
@@ -81,7 +84,7 @@ input {
     font-size: 15px;
 }
 .calculation-decoration {
-    margin: 0 0 -15px -29px;
+    margin: 0 0 0 -29px;
     height: auto;
     position: absolute;
     right: 0;
