@@ -1,3 +1,7 @@
+section.calculation{
+    margin-bottom: 60px;
+}
+
 .calculation{
     .container{
         position: relative;
@@ -88,7 +92,7 @@ input {
     height: auto;
     position: absolute;
     right: 0;
-    bottom: 0;
+    bottom: -60px;
     max-width: 560px;
     width: 30vw;
     img {
