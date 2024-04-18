@@ -29,10 +29,6 @@
         font-size: 16px;
     }
 
-    .container {
-        padding-right: $container-mobile-padding;
-        padding-left: $container-mobile-padding;
-    }
 
     .container-xxl{
         padding: 0;
@@ -220,4 +216,43 @@ h3 {
     width: 780px;
     margin: 0 auto;
 }
+
+.calculation,
+.advantages,
+.delivery,
+.services
+ {
+     margin-bottom: $section-margin;
+}   
+.advantages,
+ .services {
+  @include default-bg-mobile;
+ }
+ .advantages:before {
+    content: "";
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 100%;
+    background-color: $bg-secondary;
+    z-index: -1;
+}
+
+.slider-template {
+    width: 350px;
+    margin: 0 auto;
+}
+.delivery:before {
+    content: "";
+    border-radius: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background-color: $bg-secondary;
+    z-index: -1;
+}
+
 }
