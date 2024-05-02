@@ -1,8 +1,15 @@
 @media (min-width: 1025px) {
-    .hamburger{
-        display: none;
+    .header__nav {
+        display: flex; 
     }
-    button:focus:not(:focus-visible) {
-        box-shadow: none;
+    .banner {
+        .slick-slide {
+            border-radius: 20px;
+                }    
     }
+    .calculation-form {
+        min-width: 626px;
+        }
 }
+
+

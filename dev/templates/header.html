@@ -1,41 +1,35 @@
 <!DOCTYPE html>
-<html lang="uk">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="theme-color" content="#188de7">
+    <meta name="theme-color" content="#89C249">
     <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no" />
     <title>MasterTao</title>
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/hamburgers.css">
-    <link rel="stylesheet" href="assets/css/nice-select.min.css">
-    <link rel="stylesheet" href="assets/css/jquery.fancybox.min.css">
-    <link rel="stylesheet" href="assets/css/slick.min.css">
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <link rel="stylesheet" type="text/css" href="style.css" />
 </head>
 
 <body>
+    <a href="markap.html" class="delete" style="position: fixed;bottom: 16px;left: 28px;">markap</a>
     <header class="header">
         <div class="container">
-            <a href="index.html" class="header-logo-link">
-            <img src="assets/img/logo.svg" class="header-logo-img" alt="logo">
+            <a href="/" class="header__logo">
+            <img src="assets/img/logo.svg" class="img-fluid" alt="Logo">
         </a>
-        <nav class="header-nav">
-            <ul class="header-nav-list">
-                <li class="header-list-item"><a class="header-list-link" href="">Ціни та терміни</a></li>
-                <li class="header-list-item"><a class="header-list-link" href="">Послуги</a></li>
-                <li class="header-list-item"><a class="header-list-link" href="">Про компанію</a></li>
-                <li class="header-list-item"><a class="header-list-link" href="">Kонтакти</a></li>
-                <li class="header-list-item"><a class="header-list-link" href="">Оформити вантаж</a></li>
-            </ul>
-            <button type="button" class="btn">Оформити вантаж</button>
-        </nav>
-        <button class="hamburger hamburger--spin" type="button">
-            <span class="hamburger-box">
-          <span class="hamburger-inner">
-              </span>
-            </span>
-        </button>
-    </div>
-</header>
- 
+            <nav class="header__nav">
+                <ul class="header__nav-list">
+                    <li class="header__nav-item"><a href="#delivery-nav" class="header__nav-item-link">Ціни та терміни</a></li>
+                    <li class="header__nav-item"><a href="#services-nav" class="header__nav-item-link">Послуги</a></li>
+                    <li class="header__nav-item"><a href="#about-nav" class="header__nav-item-link">Про компанію</a></li>
+                    <li class="header__nav-item"><a href="tel:0996113620" class="header__nav-item-link">Контакти</a></li>
+                    <li class="header__nav-item"><a href="#seo-nav" class="header__nav-item-link">Оформити вантаж</a></li>
+                </ul>
+                <button class="btn btn-primary">Залишити заявку</button>
+            </nav>
+            <button class="hamburger hamburger--collapse"></button>
+        </div>
+    </header>
+

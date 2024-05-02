@@ -1,50 +1,86 @@
-.header{
-	position: relative;
-	padding: 25px 0 20px;
-	
-	&-logo{
-		max-width: 168px;
-	}
+.header {
+    padding: 25px 0 39px;
 
-     > .container {
-		display: flex;
-	}
-
-	&-nav {
-		display: flex;
-		width: 100%;
-	}
-
-    &-nav-list {
-		display: flex;
-		gap: 8px;
-		list-style: none;
-		font-weight: 400;
-		line-height: 150%;
-		padding-left: 88px;
-	}
-
-	&-list-link {
-		padding: 13px 12px 10px;
-		text-decoration: none;
-		color: #fff;
-	}
-	
-	&-list-link:hover {
-		color: $color-primary;
-	}
-    .btn {
-        margin-left: auto;
-    }
-    
-    &-list-item {
+    .container {
         display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
-	.btn {
-		width: 171px;
-	}
-	.hamburger{
-		margin-left: auto;
-	}
+
+    &__logo {
+        max-width: 172px;
+        width: 100%;
+        img {
+            max-height: 60px;
+        }
+    }
+    &__nav {
+        width: 100%;
+        display: none;
+        z-index: 1;
+        &.show {
+            display: flex;
+        }
     
+        &-list {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 622px;
+            width: 100%;
+            margin: 4px auto 0;
+            padding: 0;
+        }
+
+        &-item-link {
+            color: $text-color;
+            text-decoration: none;
+            &:hover {
+                color: $color-primary;
+            }
+        }
+    }
+    .hamburder {
+        padding: 13px 22px;
+    }
+}
+.hamburger {
+    padding: 19px;
+    border: 1px solid;
+    background: url(assets/img/icon-burger.svg) center no-repeat;
+    &.open {
+        background: url(assets/img/icon-burger-close.svg) center no-repeat;
+    }
+    padding: 1.3px 13.5px;
+    border: none;
+    position: relative;
+    display: none;
+    
+    &:before,
+    &:after {
+        content: "";
+        top: -11px;
+        left: 0;
+        position: absolute;
+        height: 2.5px;
+        width: 27px;
+        background: #fff;
+        transition: .3s;
+    }
+
+    &:after {
+        top: initial;
+        bottom: -11px;
+        left: 0;
+    }
+
+    &.open {
+        background: transparent;
+        &:before {
+            transform: rotate(-45deg) translate(-6px, 6px);
+            }
+        &:after {
+        transform: rotate(45deg) translate(-10px, -10px);
+        }
+    }
 }

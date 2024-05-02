@@ -1,111 +1,117 @@
-const hamburger = document.querySelector('.hamburger')
-const headerNav = document.querySelector('.header-nav')
+$(document).ready(function(){
+  // const burger = document.querySelector('.btn-burger');
+  // const nav = document.querySelector('.header__nav');
 
+  // const toggleMenu =()=> {
+  // burger.classList.toggle('open');
+  // nav.classList.toggle('show');
+  // }
+  
+  // burger.addEventListener('click', toggleMenu);
 
-hamburger.addEventListener('click', function() {
-    hamburger.classList.toggle('is-active')
-    headerNav.classList.toggle('show')
-})
+$('#banner').slick({
+        // setting-name: setting-value
+        arrows: true,
+        dots: true,
+        fade: true,
+        appendArrows: $('.banner-arrows'),
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              arrows: false,
+            }
+          },
+        ]
+    });
 
+/*form calculation*/ 
+    const checkboxes = document.querySelectorAll('[type=checkbox]')
+    if (checkboxes.length > 0) {
+      checkboxes.forEach(checkbox => { 
+        checkbox.closest('.input-column').classList.add('column-checkbox')  
+      })  
+    }
 
-$('#first-screen-slider').slick({
-    arrows:true,
-    dots:true,
-    appendArrows:$('.first-screen-arrow'),
-    responsive: [
+    const file = document.querySelectorAll('.input-file')
+    if(file.length > 0) {
+      
+    function addPadding() {
+    if ($(window).width() > 1024) {
+      file.forEach(item => {
+        item.closest('.input-column').style.paddingTop = '6px'
+      })
+    } else  {
+      file.forEach(item => {
+        item.closest('.input-column').style.paddingTop = '0'
+      })
+    }
+  } addPadding() 
+  $(window).on("resize", addPadding)
+}
+
+/*slider advantages(mobile only)*/ 
+    mobileOnlySlider("#slider-advantages", true, false, 1024);
+
+    function mobileOnlySlider($slidername, $dots, $arrows, $breakpoint) {
+      var slider = $($slidername);
+      var settings = {
+        mobileFirst: true,
+        dots: $dots,
+        arrows: $arrows,
+        responsive: [
+          {
+            breakpoint: $breakpoint,
+            settings: "unslick"
+          }
+        ]
+      };
+
+      slider.slick(settings);
+    
+      $(window).on("resize", function () {
+        if ($(window).width() > $breakpoint) {
+          return;
+        }
+        if (!slider.hasClass("slick-initialized")) {
+          return slider.slick(settings);
+        }
+      });
+    } 
+/*slider template*/ 
+     $('.slider-template').slick({
+      infinite: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      responsive: [
         {
-          breakpoint: 1024,
+          breakpoint: 1400,
           settings: {
-            arrows: false,
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 1025,
+          settings: {
+            slidesToShow: 1,
+          }
+        },
+        {
+          breakpoint: 767,
+          settings: {
+            slidesToShow: 1,
+            dots: true,
+            arrows: false
           }
         },
       ]
     });
 
-    $(document).ready(function() {
-      $('select').niceSelect();
-    });
-
-  const fileInput = document.querySelector('#calculation-file');
-const fileName = document.querySelector('#file-name')
-
-fileInput.addEventListener('change', () => {
-   fileName.innerHTML = fileInput.files[0].name;
-});
-
-const controledField = document.querySelectorAll('[type="checkbox"]')
-const fileField = document.querySelectorAll('[type="file"]')
-
-controledField.forEach(input => {
-    input.closest('.input-wrapper').classList.add('controled-wrapped')
-    input.closest('.col').classList.add('controled-col')
-})
-
-fileField.forEach(input => {
-  input.closest('.input-wrapper').classList.add('file-wrapper')
-})
-
-// Mobile Only Slider
-mobileOnlySlider(".slider-advantages", 1024);
-
-function mobileOnlySlider($slidername, $breakpoint) {
-  const slider = $($slidername);
-  const settings = {
-    mobileFirst: true,
-    dots: true,
-    arrows: false,
-    responsive: [
-      {
-        breakpoint: $breakpoint,
-        settings: "unslick"
-      }
-    ]
-  };
-  slider.slick(settings);
-
-  $(window).on("resize", function () {
-    if ($(window).width() > $breakpoint) {
-      return;
-    }
-    if (!slider.hasClass("slick-initialized")) {
-      return slider.slick(settings);
-    }
-  });
-}
-
-$('.slider-template').slick({
-  infinite: true,
-  slidesToShow: 3,
-  slidesToScroll: 1,
-  responsive: [
-    {
-      breakpoint: 1400,
-      settings: {
-        slidesToShow: 2,
-      }
-    },
-    {
-      breakpoint: 1025,
-      settings: {
-        slidesToShow: 1,
-      }
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        slidesToShow: 1,
-        dots: true,
-        arrows: false
-      }
-    },
-  ]
-});
-
 
 
 function addClassCharter(){
-const section = document.querySelectorAll('section')
-section.forEach(item => item.classList.add('charter'))
+  const section = document.querySelectorAll('section')
+  section.forEach(item => item.classList.add('charter'))
 }
 document.querySelector('.home-page') ? addClassCharter() : null;
 
@@ -116,13 +122,13 @@ const arrayBurgers = document.querySelectorAll('.hamburger')
 const nav = document.querySelector('.header__nav');
 
 if (arrayBurgers.length > 0) {
-arrayBurgers.forEach(item => {
-  item.addEventListener('click', function(){
-    item.classList.toggle('is-active');
-    nav.classList.toggle('show');
-})
-})
+    arrayBurgers.forEach(item => {
+      item.addEventListener('click', function(){
+        item.classList.toggle('is-active');
+        nav.classList.toggle('show');
+    })
+  })
 }
-;
+});
 
 

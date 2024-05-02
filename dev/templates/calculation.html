@@ -1,75 +1,79 @@
 <section class="calculation">
     <div class="container">
-        <div class="template-title col-lg-7">
-            <h2> Отримайте розрахунок вартості доставки вашого вантажу</h2>
+        <div class="title-template col-lg-7">
+            <h2>Отримати розрахунок вартості доставки вашого вантажу</h2>
         </div>
         <div class="calculation-row">
             <form class="calculation-form">
-                <div class="row">
-                    <div class="col">
-                        <div class="input-wrapper">
+                <div class="input-row">
+                    <div class="input-column">
+                        <div class="input-box">
                             <label for="category">Категорія товару:</label>
-                            <select name="category" id="category">
-                                <option value="Бытовая техника">Побутова техніка</option>
-                                <option value="Мужские вещи">Чоловічі речі</option>
-                                <option value="Женские вещи">Жіночі речі</option>
-                                <option value="Детские вещи">Дитячі речі</option>
-                                <option value="Товари для дома">Товари для дому</option>
-                            </select>
+                            <input id="category" type="text" placeholder="Категорія товару:">
                         </div>
-                        <div class="input-wrapper">
-                            <label for="calculation-weight">Вага вантажу (кг):</label>
-                            <input id="calculation-weight" type="number" placeholder="Введіть вагу">
+                        <div class="input-box">
+                            <label for="weight">Вага вантажу (кг):</label>
+                            <input id="weight" type="number" placeholder="Введіть вагу">
                         </div>
                     </div>
-                    <div class="col">
-                        <div class="input-wrapper">
-                            <label for="calculation-price">Вартість вантажу:</label>
-                            <input id="calculation-price" type="number" placeholder="Введіть вартість">
+                    <div class="input-column">
+                        <div class="input-box">
+                            <label for="price">Вартість вантажу:</label>
+                            <input id="price" type="number" placeholder="Введіть вартість">
                         </div>
-                        <div class="input-wrapper">
-                            <label for="calculation-size">Об'єм вантажу (м3):</label>
-                            <input id="calculation-size" type="number" placeholder="Введіть об'єм">
+                        <div class="input-box">
+                            <label for="size">Обєм вантажу (м3):</label>
+                            <input id="size" type="number" placeholder="Введіть обєм">
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="input-wrapper">
-                            <input id="insurance" type="checkbox" name="terms">
-                            <label for="insurance">Страхування</label>
+                <div class="input-row">
+                    <div class="input-column">
+                        <div class="input-box">
+                            <div class="check-button">
+                                <input id="insurance" type="checkbox" checked="" name="insurance">
+                                <label for="insurance">Страховка</label>
+                            </div>
                         </div>
-                        <div class="input-wrapper">
-                            <input id="clearance" type="checkbox" name="terms">
-                            <label for="clearance">Митне оформлення</label>
-                        </div>
-                    </div>
-                    <div class="col">
-                        <div class="input-wrapper">
-                            <label for="calculation-code">Код ТН ВЭД:</label>
-                            <input id="calculation-code" type="number" placeholder="Введіть код">
+                        <div class="input-box">
+                            <div class="check-button">
+                                <input id="customs-clearance" type="checkbox" checked="" name="customs-clearance">
+                                <label for="customs-clearance">Митне оформлення</label>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="row">
-                    <div class="col">
-                        <div class="input-wrapper">
-                            <div id="file-name" class="file-name"></div>
-                            <input id="calculation-file" type="file">
-                            <label for="calculation-file">Загрузити фото товару</label>
+                    <div class="input-column">
+                        <div class="input-box">
+                            <label for="product-code">Код ТН ВЭД:</label>
+                            <input id="product-code" type="text" placeholder="Введіть код">
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="col">
-                        <button type="button" class="btn-lg-calcultion">Наступний крок <img src="assets/img/icon-arrow-left.svg" class="icon" alt="icon"></button>
+                <div class="input-row">
+                    <div class="input-column">
+                        <div class="input-box">
+                            <div id="file-name">Ваш файл</div>
+                            <input class="input-file" id="fileInput" name="fileInput" type="file">
+                            <label for="fileInput">Загрузити фото товару</label>
+                        </div>
                     </div>
                 </div>
-
+                <div class="input-row">
+                    <div class="input-column">
+                        <button type="button" class="btn btn-primary btn-lg">Наступний крок<img src="assets/img/arrow-right.svg" class="icon" alt="icon"></button>
+                    </div>
+                </div>
             </form>
-            <div class="calculation-decoration">
-                <img src="assets/img/calculation-decoration.png" class="img-fluid" alt="calculation-decoration">
-            </div>
+
+
+
+
+
+
+
+
+            <img src="assets/img/calculation-decoration.png" class="calculation-decoration img-fluid" alt="calculation">
         </div>
+    </div>
     </div>
 </section>
